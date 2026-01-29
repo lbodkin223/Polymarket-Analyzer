@@ -1,0 +1,21 @@
+# Core dependencies
+numpy>=1.24.0
+requests>=2.31.0
+python-dotenv>=1.0.0
+
+# CLI
+click>=8.1.0
+
+# Optional: Caching
+redis>=5.0.0
+
+# Optional: LLM providers (uncomment as needed)
+# openai>=1.0.0
+# anthropic>=0.18.0
+
+# Optional: Polymarket SDK
+# py-clob-client>=0.1.0
+
+# Development
+pytest>=7.0.0
+pytest-cov>=4.0.0

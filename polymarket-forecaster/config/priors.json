@@ -1,0 +1,108 @@
+{
+  "domain_priors": {
+    "politics": {
+      "election": {
+        "incumbent_advantage": 0.55,
+        "challenger_base": 0.45,
+        "notes": "Incumbents typically have slight edge"
+      },
+      "legislation": {
+        "pass_rate": 0.15,
+        "notes": "Most proposed legislation fails"
+      },
+      "confirmation": {
+        "approval_rate": 0.85,
+        "notes": "Presidential nominees usually confirmed"
+      }
+    },
+    "economy": {
+      "fed_rate_cut": {
+        "base_probability": 0.25,
+        "notes": "Rate cuts are relatively rare events"
+      },
+      "fed_rate_hike": {
+        "base_probability": 0.20,
+        "notes": "Rate hikes during normal periods"
+      },
+      "recession": {
+        "annual_probability": 0.15,
+        "notes": "Recessions occur roughly every 6-7 years"
+      },
+      "inflation_target": {
+        "hit_probability": 0.40,
+        "notes": "Fed often misses 2% target"
+      }
+    },
+    "crypto": {
+      "bitcoin_ath": {
+        "monthly_probability": 0.08,
+        "notes": "New ATH is rare in any given month"
+      },
+      "etf_approval": {
+        "base_probability": 0.30,
+        "notes": "SEC historically skeptical"
+      },
+      "major_hack": {
+        "monthly_probability": 0.05,
+        "notes": "Major exchange hacks are rare"
+      }
+    },
+    "sports": {
+      "upset_probability": {
+        "heavy_favorite": 0.15,
+        "moderate_favorite": 0.35,
+        "notes": "Upsets happen more than odds suggest"
+      },
+      "championship": {
+        "top_seed_wins": 0.35,
+        "notes": "Best regular season team often doesn't win"
+      }
+    },
+    "tech": {
+      "product_launch": {
+        "on_time": 0.60,
+        "notes": "Tech launches often delayed"
+      },
+      "acquisition": {
+        "completion_rate": 0.85,
+        "notes": "Most announced acquisitions complete"
+      },
+      "ipo": {
+        "first_day_pop": 0.70,
+        "notes": "Most IPOs trade up on day 1"
+      }
+    },
+    "geopolitics": {
+      "conflict_escalation": {
+        "base_probability": 0.20,
+        "notes": "Most tensions de-escalate"
+      },
+      "treaty_ratification": {
+        "success_rate": 0.65,
+        "notes": "Most treaties eventually ratified"
+      },
+      "sanctions": {
+        "implementation_rate": 0.90,
+        "notes": "Announced sanctions usually implemented"
+      }
+    }
+  },
+  "time_decay": {
+    "description": "Probability adjustment based on time remaining",
+    "factors": {
+      "immediate": {"days": 7, "confidence_multiplier": 1.2},
+      "short_term": {"days": 30, "confidence_multiplier": 1.0},
+      "medium_term": {"days": 90, "confidence_multiplier": 0.8},
+      "long_term": {"days": 365, "confidence_multiplier": 0.6}
+    }
+  },
+  "market_efficiency": {
+    "description": "How much to trust market prices by volume",
+    "thresholds": {
+      "very_high": {"min_volume": 1000000, "market_weight": 0.8},
+      "high": {"min_volume": 100000, "market_weight": 0.6},
+      "medium": {"min_volume": 10000, "market_weight": 0.4},
+      "low": {"min_volume": 1000, "market_weight": 0.2}
+    }
+  }
+}
